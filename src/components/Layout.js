@@ -6,7 +6,8 @@ export default function Layout({child}){
         <nav>
           <li>About us</li>
           <li>Contact</li>
-          <li>Concept</li>
+          <li>Movies</li>
+          <li>TV Shows</li>
         </nav>
         <p className="about-us">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
