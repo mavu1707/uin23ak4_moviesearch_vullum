@@ -20,7 +20,7 @@ export default function SearchResults() {
       )
       const data = await response.json()
       setSearchResults(data.Search || [])
-    };
+    }
 
     fetchSearchResults()
   }, [searchQuery])
