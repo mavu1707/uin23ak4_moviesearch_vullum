@@ -1,8 +1,12 @@
+//API
+//https://www.omdbapi.com/?s=James%20Bond&type=movie&apikey=685b8bcf
+
 import { useEffect, useState } from "react"
+
 export default function Main(){
-  //https://www.omdbapi.com/?s=James%20Bond&type=movie&apikey=685b8bcf
+
   const [movie, setMovie] = useState([])
-  const [filter, setFilter] = useState("All")
+  const [filter, setFilter] = useState([])
   const [result, setResult] = useState([])
 
   const getMovie = async() =>{
@@ -11,21 +15,15 @@ export default function Main(){
     const data = await response.json()
 
     setMovie(data.articles)
-    
-    console.log(data);
+
+    setResult(movie.filter(items => items.source.name === filter))
 
   }
-
+  console.log(result);
 
   useEffect(() =>{
     getMovie()
-},[filter])
+  },[])
 
-  
-
-  
-  
-  
-  
-  return <h2>Main</h2>
+  return <h2>Maidjskjn</h2>
 }
