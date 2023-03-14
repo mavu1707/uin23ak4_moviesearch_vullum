@@ -2,19 +2,17 @@ export default function Layout({child}){
   return (
     <div>
       <header>
-        <h1>Moviesearch.com</h1>
+        <h1>MovSe</h1>
         <nav>
           <li>About us</li>
-          <li>Contact us</li>
+          <li>Contact</li>
+          <li>Concept</li>
         </nav>
-
-        <nav>
-          <li>Movies</li>
-          <li>TV sereis</li>
-          <li>News</li>
-        </nav>
+        <p className="about-us">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        </p>
       </header>
-      
+
       <main>
         {child}
       </main>

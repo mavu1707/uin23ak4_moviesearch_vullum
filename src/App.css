@@ -39,6 +39,63 @@
 
 /* Min egen CSS */
 
+/*
+Inspirasjon https://www.orb-space.com/
+Color palette https://colorhunt.co/palette/f5eaeaffb84cf16767a459d1
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap');
+
+:root{
+  --peach: #f5eaea;
+  --orange: #ffb84c;
+  --red: #f16767;
+  --purple: #a459d1;
+  --max-width: 1200px;
+}
+
+
 body{
-  
+  background-color: var(--peach);
+  color: var(--red);
+  font-family: 'Sono', sans-serif;
+}
+
+header{
+  margin: 2rem 6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1{
+  font-size: 4rem;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li{
+  list-style: none;
+  margin: 9rem 2rem;
+  background-color: var(--purple);
+  color: var(--peach);
+  padding: 3rem;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+main{
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about-us{
+  font-weight: bold;
+  font-size: 2rem;
+  max-width: 30rem;
 }
