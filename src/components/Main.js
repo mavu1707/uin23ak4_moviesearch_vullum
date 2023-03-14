@@ -1,6 +1,6 @@
 //API
 //https://www.omdbapi.com/?s=James%20Bond&type=movie&apikey=685b8bcf
-
+import MovieCards from "./Moviecards"
 import { useEffect, useState } from "react"
 
 export default function Main() {
@@ -35,5 +35,14 @@ export default function Main() {
 
   console.log(result);
 
-  return <h2>Maidjskjn</h2>;
+  return (
+    <>
+      <h1>James Bond Movies (both indian and comercials)</h1>
+      {result.length <= 0 ? movie?.map((item, index) =>(
+        <MovieCards key={index} img={item.Poster} title={item.Title} year={item.Year} />
+      )) : result?.map((item, index) =>(
+        <MovieCards key={index} img={item.Poster} title={item.Title} year={item.Year} />
+      )) }
+    </>
+  )
 }
