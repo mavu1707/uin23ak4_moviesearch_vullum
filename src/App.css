@@ -94,41 +94,35 @@ nav li:hover{
   color: var(--peach);
 }
 
-
-main{
-  max-width: var(--max-width);
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 5rem;
-}
-
 .about-us{
   font-weight: bold;
   font-size: 1.5rem;
   max-width: 40rem;
 }
 
-.movie-card-container{
-  background-color: #fff;
-  display: table-cell;
-  grid-template-columns: repeat(10, 200px);
-
+main{
+  max-width: var(--max-width);
+  height: 100vh;
+  margin-top: 5rem;
+  margin: 0 auto;
 }
 
-.movie-card{
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.2s ease-in-out;
-  cursor: pointer;
+main h1{
+  display: flex;
+  justify-content: center;
+}
+
+.movie-card-container{
+  margin-right: 5rem;
+  background-color: #282c34;
 }
 
 .movie-card img {
-  width: 20%;
-  height: auto;
-  object-position: center;
+  width: 10vh;
+  height: 15vh;
+  object-fit: cover;
 }
+
 
 footer{
   margin-top: 10rem;
