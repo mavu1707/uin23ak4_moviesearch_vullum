@@ -1,3 +1,5 @@
+import SearchResults from "./Searchresults"
+
 export default function Layout({child}){
   return (
     <div>
@@ -14,7 +16,10 @@ export default function Layout({child}){
         </p>
       </header>
 
+
+
       <main>
+      <SearchResults />
         {child}
       </main>
 
