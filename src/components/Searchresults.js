@@ -32,6 +32,7 @@ export default function SearchResults() {
         type="text"
         value={searchQuery}
         onChange={handleSearchInputChange}
+        placeholder="Search"
       />
       <ul>
         {searchResults.map((result) => (

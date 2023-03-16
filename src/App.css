@@ -112,6 +112,18 @@ main h1{
   justify-content: center;
 }
 
+input{
+  background-color: var(--peach);
+  display: flex;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid var(--red);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+  width: 40%;
+
+}
+
 .movie-card-container{
   margin-right: 5rem;
   background-color: #282c34;
@@ -127,3 +139,5 @@ main h1{
 footer{
   margin-top: 10rem;
 }
+
+
