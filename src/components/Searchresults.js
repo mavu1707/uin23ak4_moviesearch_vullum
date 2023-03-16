@@ -34,9 +34,9 @@ export default function SearchResults() {
         onChange={handleSearchInputChange}
         placeholder="Search"
       />
-      <ul>
+      <ul className="search">
         {searchResults.map((result) => (
-          <li key={result.imdbID}>
+          <li className="search-result" key={result.imdbID}>
             <img src={result.Poster} alt={result.Title} />
             <div>
               <h2>{result.Title}</h2>

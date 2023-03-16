@@ -135,6 +135,14 @@ input{
   object-fit: cover;
 }
 
+.search{
+  background-color: #282c34;
+}
+
+.search-result{
+  list-style: none;
+
+}
 
 footer{
   margin-top: 10rem;
