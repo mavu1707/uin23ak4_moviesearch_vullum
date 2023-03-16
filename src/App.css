@@ -1,44 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Min egen CSS */
-
 /*
 Inspirasjon https://www.orb-space.com/
 Color palette https://colorhunt.co/palette/f5eaeaffb84cf16767a459d1
@@ -47,64 +6,75 @@ Color palette https://colorhunt.co/palette/f5eaeaffb84cf16767a459d1
 @import url('https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap');
 
 :root{
-  --peach: #f5eaea;
-  --orange: #ffb84c;
-  --red: #f16767;
-  --purple: #a459d1;
-  --max-width: 1200px;
+  --white: #FBF9FA;
+  --pink: #FD0054;
+  --dark-pink: #A80038;
+  --black: #2B2024;
+  --max-width-head: 1200px;
+  --max-width-main: 800px;
 }
 
-
 body{
-  background-color: var(--peach);
-  color: var(--red);
+  background-color: var(--white);
+  color: var(--black);
   font-family: 'Sono', sans-serif;
 }
 
 header{
-  margin: 1rem 4rem;
   display: flex;
+  margin: 0 auto;
   justify-content: space-between;
-  align-items: top;
+  align-items: center;
+  max-width: var(--max-width-head);
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-header h1{
-  font-size: 4rem;
-}
-
-nav{
-  display: flex;
-  justify-content: space-between;
-}
-
-nav li{
-  list-style: none;
-  margin: 8rem 2rem;
-  background-color: var(--purple);
-  color: var(--peach);
-  padding: 2rem;
-  text-align: center;
-  display: inline-block;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-nav li:hover{
-  background-color: var(--orange);
-  color: var(--peach);
+.logo{
+  font-size: 3rem;
+  color: var(--pink);
+  max-width: 200px;
 }
 
 .about-us{
   font-weight: bold;
   font-size: 1.5rem;
-  max-width: 40rem;
+  color: var(--dark-pink);
+  max-width: 200px;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav li {
+  list-style: none;
+  margin: 2rem 1rem;
+  background-color: var(--dark-pink);
+  color: var(--white);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+nav li:hover{
+  background-color: var(--pink);
+  color: var(--white);
 }
 
 main{
-  max-width: var(--max-width);
-  height: 100vh;
-  margin-top: 5rem;
+  max-width: var(--max-width-main);
+  height: 15vh;
   margin: 0 auto;
+  flex: 1;
 }
 
 main h1{
@@ -112,40 +82,92 @@ main h1{
   justify-content: center;
 }
 
+.search{
+  margin-top: 5rem;
+  color: var(--dark-pink);
+}
+
 input{
-  background-color: var(--peach);
   display: flex;
   margin: 0 auto;
   padding: 20px;
-  border: 2px solid var(--red);
-  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 20px;
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
-  width: 40%;
-
+  width: 80%;
 }
 
-.movie-card-container{
-  margin-right: 5rem;
-  background-color: #282c34;
-}
-
-.movie-card img {
-  width: 10vh;
-  height: 15vh;
-  object-fit: cover;
-}
-
-.search{
-  background-color: #282c34;
+input:focus{
+  outline: none;
 }
 
 .search-result{
   list-style: none;
-
+  background-color: var(--dark-pink);
+  margin: 0 auto;
+  width: 80%;
+  color: var(--white);
+  padding: 5px;
+  height: 300px;
+  overflow: auto;
 }
 
-footer{
+.search-result::-webkit-scrollbar{
+  width: 5px;
+}
+
+.search-result::-webkit-scrollbar-track{
+  background: #ff97ba;
+}
+
+.search-result::-webkit-scrollbar-thumb {
+  background: var(--black);
+  border-radius: 5px;
+}
+
+.search-result li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 2px solid var(--white);
+  margin: 0;
+}
+
+.search-result img{
+  width: 90px;
+  height: auto;
+}
+
+.search-box{
+  padding-left: 1rem;
+  flex: 1;
+}
+
+.james-bond{
+  color: var(--dark-pink);
   margin-top: 10rem;
+}
+
+.james-bond-box{
+  border-radius: 10px;
+}
+
+.movie-card-container{
+  margin-right: 4rem;
+}
+
+.movie-card img {
+  width: 25vh;
+  height: 40vh;
+  object-fit: cover;
+  opacity: 0.1;
+}
+
+.movie-card img:hover{
+  cursor: pointer;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
 }
 
 

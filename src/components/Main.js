@@ -38,8 +38,8 @@ export default function Main() {
 
   return (
     <>
-      <h1>James Bond</h1>
-      <HorizontalScroll>
+      <h1 className="james-bond">James Bond</h1>
+      <HorizontalScroll className="james-bond-box" style={{height: "40vh"}}>
         {result.length <= 0 ? movie?.map((item, index) =>(
           <MovieCards key={index} img={item.Poster} title={item.Title} year={item.Year} />
         )) : result?.map((item, index) =>(
