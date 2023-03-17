@@ -37,6 +37,7 @@ export default function Main() {
   console.log(result);
 
   //placeholder bilde
+  //scroll with pointer 
   return (
     <>
       <h1 className="james-bond">James Bond</h1>
