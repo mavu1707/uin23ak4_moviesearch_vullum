@@ -29,6 +29,7 @@ export default function SearchResults() {
     fetchSearchResults()
   }, [searchQuery])
 
+  //placeholder bilde 
   return (
     <>
       <h1 className="search">Search</h1>

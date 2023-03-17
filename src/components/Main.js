@@ -36,6 +36,7 @@ export default function Main() {
 
   console.log(result);
 
+  //placeholder bilde
   return (
     <>
       <h1 className="james-bond">James Bond</h1>
