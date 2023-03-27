@@ -2,12 +2,13 @@
 //https://www.omdbapi.com/?s=James%20Bond&type=movie&apikey=685b8bcf
 import MovieCards from "./Moviecards"
 import { useEffect, useState } from "react"
-import HorizontalScroll from 'react-scroll-horizontal'
 
 export default function Main() {
   const [movie, setMovie] = useState([])
   const [filter, setFilter] = useState("")
   const [result, setResult] = useState([])
+
+  const placeholder = "placeholder_unsplash.jpg"
 
   const getMovie = async () => {
 
@@ -34,20 +35,14 @@ export default function Main() {
     getMovie();
   }, []);
 
-  console.log(result);
-
-  //placeholder bilde
-  //scroll with pointer 
   return (
     <>
       <h1 className="james-bond">James Bond</h1>
-      <HorizontalScroll className="james-bond-box" style={{height: "40vh"}}>
         {result.length <= 0 ? movie?.map((item, index) =>(
-          <MovieCards key={index} img={item.Poster} title={item.Title} year={item.Year} />
+          <MovieCards key={index} img={item.Poster === "N/A" ? "https://via.placeholder.com/200x350?text=Missing+Image" : item.Poster} title={item.Title} year={item.Year} />
         )) : result?.map((item, index) =>(
-          <MovieCards key={index} img={item.Poster} title={item.Title} year={item.Year} />
+          <MovieCards key={index} img={item.Poster === "N/A" ? "https://via.placeholder.com/200x350?text=Missing+Image" : item.Poster} title={item.Title} year={item.Year} />
         )) }
-      </HorizontalScroll>
     </>
 
   )
