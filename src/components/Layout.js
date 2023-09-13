@@ -1,5 +1,6 @@
 import SearchResults from "./Searchresults"
-
+//Router 
+//Linker 
 export default function Layout({child}){
   return (
     <div>
